@@ -1,2 +1,2 @@
 # PracticePracticePractice
-Simple projects that I do to gauge my mastery 
+Simple and shortprojects that I do to gauge my progress
