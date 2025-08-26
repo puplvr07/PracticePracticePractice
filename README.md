@@ -1,2 +1,3 @@
-# PracticePracticePractice
-Simple and shortprojects that I do to gauge my progress
+# Practice, Practice, Practice
+Simple and short projects that I do to gauge my progress
+Kind of messy since some are unfinished
