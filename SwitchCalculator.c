@@ -11,7 +11,7 @@ int main() {
     scanf("%lf", &num1);
 
     printf("Enter an operator (+ - * /): ");
-    scanf("%c", &operator);
+    scanf(" %c", &operator); //space before %c to consume any leftover whitespace
 
     printf("Enter another number: ");
     scanf("%lf", &num2);
@@ -19,22 +19,24 @@ int main() {
     switch(operator){
         case '+':
             result = num1 + num2;
-            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, result);
             break;
         
         case '-':
             result = num1 - num2;
-            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, result);
             break;
 
         case '*':
             result = num1 * num2;
-            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, result);
             break;
 
         case '/':
+            if(num2 == 0) {
+                printf("Error: Division by zero is not allowed.\n");
+                return 1;
+            }
+            else{
             result = num1 / num2;
-            printf("%.2lf / %.2lf = %.2lf\n", num1, num2, result);
+            }
             break;
         
         default:
@@ -42,7 +44,7 @@ int main() {
             break;
 
     }
-
+    printf("%.2lf %c %.2lf = %.2lf\n", num1, operator, num2, result);
     return 0;
 
 }
