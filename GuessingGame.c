@@ -1,29 +1,10 @@
-/*
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
 
 int main() {
-
-    char noun[100] = "";
-    char adjective1[100] = "";
-    char adjective2[100] = "";
-    char adjective3[100] = "";
-    char word[100] = 
-
-    printf("It is %s.\n", adjective1);
-    printf("Guess: ");
-    scanf("%s", noun);
-
-} */
-
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include <time.h>
-
-int main() {
+    //This is a program that has you guess out of 3 words (cat, dog, or rabbit) based on given adjectives.
     char noun[100] = "";
     const char *adjectives[] = {"furry", "playful", "whiskered"};
     const char *words[] = {"cat", "dog", "rabbit"};
@@ -68,4 +49,7 @@ int main() {
     }
 
     return 0;
+
+}
+
 }
