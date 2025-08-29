@@ -5,12 +5,12 @@
 #include <Windows.h>
 
 void scrambledWord(char word[]) {
-    char scrambled[50];            
+    char scrambled[100];            
     strcpy(scrambled, word);       
     int length = strlen(scrambled);
 
-    for (int i = 0; i < length; i++) {
-        int j = rand() % length;   // modulo sh
+    for (int i = length - 1; i > 0; i--) {
+        int j = rand() % (i + 1);   // modulo sh
         char temp = scrambled[i];  
         scrambled[i] = scrambled[j];
         scrambled[j] = temp;
@@ -25,7 +25,7 @@ int main() {
 
     char user[100]; 
     printf("Enter a word to scramble: ");
-    scanf("%s", user); 
+    scanf("%[^\n]s", user); // Word can have spaces
 
     printf("The original word is: %s\n", user);
 
