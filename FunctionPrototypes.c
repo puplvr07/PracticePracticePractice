@@ -6,11 +6,8 @@
 #include <Windows.h>
 
 
-void action(char skill[], int hp){
+void action(char skill[], int hp);
 
-     printf("\nYou casted %s!\n", skill);
-     printf("It did %d damage!\n", hp);
-}
 int main(){
     srand(time(NULL)); 
     
@@ -26,7 +23,7 @@ int main(){
     if(strcmp(proceed, "Yes") == 0 || strcmp(proceed, "YES") == 0 || strcmp(proceed, "yes") == 0 || strcmp(proceed, "Y") == 0 || strcmp(proceed, "y") == 0)
     {
         while(enemy > 0){
-        printf("What spell would you like to cast? \n");
+        printf("What spell would you like to cast? \n"); //ONLY oNE WORD PLS
         scanf("%s", spell);
 
         int dmg = rand() % 100;
@@ -55,4 +52,10 @@ int main(){
     }
 
     return 0;
+}
+
+void action(char skill[], int hp){
+
+     printf("\nYou casted %s!\n", skill);
+     printf("It did %d damage!\n", hp);
 }
