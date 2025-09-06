@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <signal.h>
-#include <unistd.h>
 
 int main(){
     printf("This is a program that haves you guess a number between 1 and 1000! You have 10 lives. \n");
@@ -18,7 +16,7 @@ int main(){
         printf("Guess a number between %d-%d! \n", min, max);
         scanf("%d", &guess);
 
-        lives--;
+        lives--;    
         printf("Lives left: %d\n", lives);
 
         if(lives!=0){
